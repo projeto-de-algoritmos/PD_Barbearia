@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "job": "Corte com tesoura",
+        "price": 52
+    },
+    {
+        "id": 2,
+        "job": "Corte com máquina",
+        "price": 30
+    },
+    {
+        "id": 3,
+        "job": "Camuflagem de cabelos brancos",
+        "price": 60
+    },
+    {
+        "id": 4,
+        "job": "Corte infantil",
+        "price": 55
+    },
+    {
+        "id": 5,
+        "job": "Acabamentos (Apenas costeletas e nuca)",
+        "price": 20
+    },
+    {
+        "id": 6,
+        "job": "Lavação + Finalização",
+        "price": 20
+    },
+    {
+        "id": 7,
+        "job": "Hidratação Capilar",
+        "price": 30
+    },
+    {
+        "id": 8,
+        "job": "Sessão anti-queda",
+        "price": 120
+    },
+    {
+        "id": 9,
+        "job": "Terapia Detox",
+        "price": 60
+    },
+    {
+        "id": 10,
+        "job": "Tonalização de cabelos",
+        "price": 70
+    }
+]    
