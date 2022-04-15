@@ -1,0 +1,10 @@
+
+.AppointmentBlock {
+    color: white;
+    background-color: rgb(111, 137, 166);
+    padding: 5px;
+    margin: 0px;
+
+    border-radius: 10px;
+    overflow: hidden;
+}

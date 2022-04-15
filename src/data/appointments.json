@@ -1,0 +1,37 @@
+[
+    {
+        "client": "João",
+        "job": ["Barbear Tradicional"],
+        "price": 40,
+        "start": "14:30",
+        "duration": 0.5
+    },
+    {
+        "client": "José",
+        "job": ["Barbear Tadicional", "Hidratação Barba"],
+        "price": 75,
+        "start": "13:30",
+        "duration": 1.5
+    },
+    {
+        "client": "Joaquim",
+        "job": ["Hidratação Barba"],
+        "price": 35,
+        "start": "12:30",
+        "duration": 1
+    },
+    {
+        "client": "José",
+        "job": ["Barbear Tadicional", "Hidratação Barba"],
+        "price": 75,
+        "start": "13:30",
+        "duration": 1.5
+    },
+    {
+        "client": "Gebissom",
+        "job": ["Sessão anti-queda"],
+        "price": 120,
+        "start": "14:00",
+        "duration": 2
+    }
+]

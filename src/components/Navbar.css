@@ -1,0 +1,48 @@
+h1 {
+    font-family: 'Neonderthaw', cursive;
+    font-weight: 200;
+    text-shadow: 1px 1px 8px rgb(197, 214, 228);
+
+    animation-duration: 8s;
+    animation-name: sign;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sign {
+    0% {color: rgb(184, 179, 172);
+        text-shadow: none;}
+    3% {color: antiquewhite;
+        text-shadow: 1px 1px 8px rgb(197, 214, 228);}
+    5% {color: rgb(139, 137, 135);
+        text-shadow: none;}
+    8% {color: antiquewhite;
+        text-shadow: 1px 1px 8px rgb(197, 214, 228);}
+    12% {color: rgb(143, 140, 136);
+        text-shadow: none;}
+    16% {color: antiquewhite;
+        text-shadow: 1px 1px 8px rgb(197, 214, 228);}
+    16% {color: rgb(184, 179, 172);
+        text-shadow: none;}
+    19% {color: antiquewhite;
+        text-shadow: 1px 1px 8px rgb(197, 214, 228);}
+    19% {color: rgb(184, 179, 172);
+        text-shadow: none;}
+    21% {color: antiquewhite;
+        text-shadow: 1px 1px 8px rgb(197, 214, 228);}
+    100% {color: antiquewhite;
+        text-shadow: 1px 1px 8px rgb(197, 214, 228);}
+}
+
+.Navbar {
+    display: flex;
+    flex-direction: column;
+    height: 3em;
+
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+    color: antiquewhite;
+
+    box-shadow: 2px 2px 19px 0px #000000;
+    background: rgb(49, 46, 46);
+}

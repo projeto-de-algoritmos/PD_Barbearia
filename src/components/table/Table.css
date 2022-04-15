@@ -1,0 +1,24 @@
+
+table {
+    background-color: rgb(250, 235, 215, 0.6);
+    width: 60%;
+    min-width: 720px;
+    margin: auto;
+
+    border-radius: 15px;
+    margin-top: 10%;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+table thead {
+    color: rgb(192, 202, 211);
+    background: #353131;
+    border-bottom: 0px solid #444444;
+}
+
+td, .th{
+    border-right: 1px dashed #000000;
+    margin: 5px;
+    padding: 5px;
+}
