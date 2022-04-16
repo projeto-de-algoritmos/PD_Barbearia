@@ -1,3 +1,8 @@
+const timeToNumber = (time) => {
+    time = time.split(':');
+    return parseInt(time[0]) + parseInt(time[1])/60
+}
+
 const findCompatibility = (tasks, index) => {
     for(let i = index - 1; i >= 0; i--){
         if(tasks[index].startTime >= tasks[i].finishTime){
@@ -32,11 +37,24 @@ const findSolution = (M, j, tasks, p, solution) => {
     }
 }
 
-export const weightedIntervalScheduling = (tasks) => {
+export const weightedIntervalScheduling = (appointments) => {
+    const tasks = [];
+
+    for(let i = 0; i < appointments.length; i++){
+        tasks.push({
+            "startTime": timeToNumber(appointments[i].start),
+            "finishTime": timeToNumber(appointments[i].start) + appointments[i].duration,
+            "value": appointments[i].price,
+            "id": i
+        })
+    }
+
+
     tasks.unshift({
         "startTime": 0,
         "finishTime": 0,
-        "value": 0
+        "value": 0,
+        "id": -1
     });
 
     let M; //Array de memorização
@@ -57,33 +75,11 @@ export const weightedIntervalScheduling = (tasks) => {
     console.log('Serviços escolhidos: ')
     findSolution(M, tasks.length - 1, tasks, p, solution);
 
+    let path = [];
     for(let i = 0; i < solution.length; i++){
-        console.log(tasks[solution[i]])
+        path.push(tasks[solution[i]].id)
     }
+
+    return path;
 }
 
-tasks = [
-    {
-        "startTime": 1,
-        "finishTime": 2,
-        "value": 50
-    },
-    {
-        "startTime": 3,
-        "finishTime": 5,
-        "value": 20
-    },
-    {
-        "startTime": 6,
-        "finishTime": 19,
-        "value": 100
-    },
-    {
-        "startTime": 2,
-        "finishTime": 100,
-        "value": 200
-    }
-
-]
-
-weightedIntervalScheduling(tasks)
