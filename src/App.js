@@ -30,11 +30,13 @@ function App() {
   }
 
   return (
-    <div className='Page'>
+    <div className='page'>
       <Navbar></Navbar>
-      <button onClick={openAppointmentModal}>Realizar Agendamento</button>
+      <div className="buttons">
+        <button onClick={openAppointmentModal}>Realizar Agendamento</button>
+        <button onClick={handleSearch}>Gerar Melhor Horário</button>
+      </div>
       <Table appointmentsData={appointmentsData}></Table>
-      <button onClick={handleSearch}>Gerar Melhor Horário</button>
       {answer.length > 0 && <Table answer={answer} appointmentsData={appointmentsData}></Table>}
       {isModalOpen && <AppointmentModal setIsModalOpen={setIsModalOpen} appointmentsData={appointmentsData}/>}
     </div>

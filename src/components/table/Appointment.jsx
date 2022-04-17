@@ -8,6 +8,10 @@ const ROWS = ["08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00",
 
 export default props => {
 
+    // const removeAppointment = (index) => {
+    //     props.appointments.splice(index, 1)
+    // }
+
     function setSchedule() {
         let times = [];
         let durations = [];
@@ -47,14 +51,20 @@ export default props => {
         });
     };
 
-    function getLines(job, start, duration, client) {
+    function getLines(job, start, duration, client, index) {
         let columns = 0;
         return ROWS.map((_, i) => {
             if (start === ROWS[i]) {
                 columns = duration*2;
                 return (
                     <td key={i} colSpan={duration*2}>
-                        <div className="AppointmentBlock">{client}</div>
+                        <div className="AppointmentBlock">
+                            {client}
+                            {/* <button onClick={() => removeAppointment(index)}>
+                            <h1>X</h1>
+                        </button>     */}
+                        </div>
+                        
                     </td>
                 );
             }
@@ -74,7 +84,7 @@ export default props => {
         return props.appointments.map((element, i) => {
                 return (
                     <tr key={i}>
-                        { getLines(element.job, element.start, element.duration, element.client) }
+                        { getLines(element.job, element.start, element.duration, element.client, i) }
                     </tr>
                 )
         });

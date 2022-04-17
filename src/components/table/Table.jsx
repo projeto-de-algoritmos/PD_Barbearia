@@ -7,10 +7,18 @@ import './Table.css'
 
 export default props => {
 
+    const getTotal = () => {
+        let total = 0;
+        for(let i = 0; i < props.answer.length; i++){
+            total += props.appointmentsData[props.answer[i]].price;
+        }
+        return total;
+    }
+
     return (
         <table>
             <thead>
-                {props.answer != undefined ? <tr><th colSpan={25} style={{backgroundColor: "rgb(89, 89, 89)"}}>Agenda do dia</th></tr> : ''}
+                {props.answer != undefined ? <tr><th colSpan={25} style={{backgroundColor: "rgb(89, 89, 89)"}}>Agenda do dia - Valor Arrecadado: R$ {getTotal()}</th></tr> : ''}
                 <tr className="TableHead">
                     <th className="th">08:00</th>
                     <th className="th">08:30</th>
