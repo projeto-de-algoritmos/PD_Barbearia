@@ -1,5 +1,5 @@
 import React from "react";
-import Appointment from "./Appointment";
+import Appointment from "../Appointment/Appointment";
 
 import './Table.css'
 

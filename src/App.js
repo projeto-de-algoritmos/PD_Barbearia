@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { weightedIntervalScheduling } from './algorithm/weightedIntervalScheduling';
 import './App.css';
 import AppointmentModal from './components/AppointmentModal/AppointmentModal';
-import Navbar from './components/Navbar';
-import Table from './components/table/Table';
+import Navbar from './components/Navbar/Navbar';
+import Table from './components/Table/Table';
 
 const appointmentsData = require("./data/appointments.json");
 

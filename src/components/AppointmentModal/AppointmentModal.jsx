@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Job from "../Job/Job";
 
 import './AppointmentModal.css';
-const hairData = require("../../data/hairData.json");
+const jobsData = require("../../data/jobsData.json");
 
 
 
@@ -75,7 +75,7 @@ export default (props) => {
                         </button>
                     </div>
                     <div className="rightDiv">
-                        {hairData.map(data =>
+                        {jobsData.map(data =>
                             // <div key={data.id} onClick={() => addJob(data.job, data.price)}>
                             //     {data.job}
                             //     ...Valor: R$ {data.price}
