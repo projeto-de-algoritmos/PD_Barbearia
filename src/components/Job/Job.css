@@ -35,11 +35,11 @@
     border: 1px solid #74603a;
     cursor: pointer;
 
-    /* background-color: rgb(84, 119, 128); */
-    background-color: #86724d;
+    background-color:rgb(114, 114, 114);
+    color: #fff;
     
 }
 
 .chosen:hover{
-    filter: brightness(70%);
+    filter: brightness(90%);
 }

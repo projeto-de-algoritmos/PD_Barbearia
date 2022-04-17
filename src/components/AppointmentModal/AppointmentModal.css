@@ -49,7 +49,8 @@
 .main strong{
     font-size: 1.7rem;
     font-family: Roboto, sans-serif;
-    color: #74603a;
+    /* color: #74603a; */
+    color:rgb(49, 46, 46)
 }
 .main header button{
     /* position:absolute;
@@ -59,6 +60,8 @@
     border: 0;
     /* font-size: 0; */
     cursor: pointer;
+    color:rgb(49, 46, 46)
+
 }
 .main header button:focus{
     outline: none;
@@ -109,6 +112,10 @@
     padding: 3px;
 }
 
+.leftDiv label select{
+    width: 100%;
+}
+
 
 .leftDiv button{
     width: 100%;
@@ -116,11 +123,13 @@
     height: 3.2rem;
 
     border-radius: 5px;
-    border-color: #7e592a;
+    /* border-color: #7e592a; */
 
     cursor: pointer;
     color: #fff;
-    background-color: #74603a;
+    /* background-color: #74603a; */
+    background: rgb(49, 46, 46);
+
 
     font-size: 1.25rem;
     font-weight: 600;
@@ -132,7 +141,7 @@
 }
 
 .leftDiv button:hover{
-    filter: brightness(70%);
+    filter: brightness(80%);
 }
 
 .rightDiv{

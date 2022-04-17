@@ -31,20 +31,31 @@ body {
 
   height: 3.2rem;
 
+  box-shadow: 2px 2px 19px 0px #000000;
+  background: rgb(49, 46, 46);
+
   border-radius: 5px;
-  border-color: #7e592a;
+  /* border-color: #7e592a; */
+
+  padding: 10px;
 
   cursor: pointer;
   color: #fff;
-  background-color: #74603a;
+  /* background-color: #74603a; */
 
   font-size: 1.25rem;
   font-weight: 600;
 
   transition: filter 0.3s;
-  outline: none;
+  /* outline: none; */
 
 }
+
+.page .buttons button:hover{
+  filter:brightness(90%);
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
