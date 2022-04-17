@@ -29,7 +29,7 @@ export default props => {
     };
 
     return props.appointments.map((element, i) => {
-            console.log(element)
+            // console.log(element)
             return (
                 <tr key={i}>
                     { getLines(element.job, element.start, element.duration) }

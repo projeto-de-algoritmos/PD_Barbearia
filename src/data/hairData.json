@@ -48,5 +48,40 @@
         "id": 10,
         "job": "Tonalização de cabelos",
         "price": 70
+    },
+    {
+        "id": 11,
+        "job": "Barbear Tradicional",
+        "price": 40
+    },
+    {
+        "id": 12,
+        "job": "Barbear Máquina",
+        "price": 30
+    },
+    {
+        "id": 13,
+        "job": "Hidratação Barba",
+        "price": 35
+    },
+    {
+        "id": 14,
+        "job": "Tonalização Barba",
+        "price": 45
+    },
+    {
+        "id": 15,
+        "job": "Limpeza de pele",
+        "price": 120
+    },
+    {
+        "id": 16,
+        "job": "Limpeza de pele c/ peeling de diamante",
+        "price": 130
+    },
+    {
+        "id": 17,
+        "job": "Hidratação facial",
+        "price": 70
     }
 ]

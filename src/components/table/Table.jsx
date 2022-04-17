@@ -5,8 +5,10 @@ import './Table.css'
 import * as data from '../../data/appointments.json'
 
 
+
 export default props => {
-    const appointmentsData = Object.values(JSON.parse(JSON.stringify(data)))
+    // const appointmentsData = Object.values(JSON.parse(JSON.stringify(data)))
+
     return (
         <table>
             <thead>
@@ -39,7 +41,7 @@ export default props => {
                 </tr>
             </thead>
             <tbody>
-                <Appointment appointments={appointmentsData}/>
+                <Appointment appointments={props.appointmentsData}/>
             </tbody>
         </table>
     )
