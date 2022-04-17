@@ -11,6 +11,7 @@ export default props => {
     function setSchedule() {
         let times = [];
         let durations = [];
+        let id = [];
         let columns = 0;
         for (let i = 0; i < props.answer.length; i++){
             let y = props.answer[i]
@@ -18,16 +19,19 @@ export default props => {
 
             times.push(ROWS[j]);
             durations.push(props.appointments[y].duration * 2);
+            id.push(y)
         }
 
+        console.log(times, durations, id)
         return ROWS.map((row, i) => {
             let pos = times.indexOf(row, 0)
             if (pos != -1) {
                 columns = durations[pos] - 1;
+                let temp = pos
                 pos = -1;
                 return (
                     <td key={i} colSpan={columns + 1}>
-                        <div className="AppointmentBlock">{props.appointments[columns + 1].job}</div>
+                        <div className="AppointmentBlock">{props.appointments[id[temp]].client}</div>
                     </td>
                 );
             }
