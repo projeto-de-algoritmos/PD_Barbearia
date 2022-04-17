@@ -43,14 +43,14 @@ export default props => {
         });
     };
 
-    function getLines(job, start, duration) {
+    function getLines(job, start, duration, client) {
         let columns = 0;
         return ROWS.map((_, i) => {
             if (start === ROWS[i]) {
                 columns = duration*2;
                 return (
                     <td key={i} colSpan={duration*2}>
-                        <div className="AppointmentBlock">{job}</div>
+                        <div className="AppointmentBlock">{client}</div>
                     </td>
                 );
             }
@@ -70,7 +70,7 @@ export default props => {
         return props.appointments.map((element, i) => {
                 return (
                     <tr key={i}>
-                        { getLines(element.job, element.start, element.duration) }
+                        { getLines(element.job, element.start, element.duration, element.client) }
                     </tr>
                 )
         });

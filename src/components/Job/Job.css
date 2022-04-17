@@ -1,0 +1,45 @@
+.notChosen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 5px;
+
+    margin: 3px;
+
+    border-radius: 5px;
+    border: 1px solid #9da0a3;
+    cursor: pointer;
+
+    
+}
+
+.notChosen:hover{
+    filter: brightness(70%);
+}
+
+.chosen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 5px;
+
+    margin: 3px;
+
+    border-radius: 5px;
+    border: 1px solid #74603a;
+    cursor: pointer;
+
+    /* background-color: rgb(84, 119, 128); */
+    background-color: #86724d;
+    
+}
+
+.chosen:hover{
+    filter: brightness(70%);
+}

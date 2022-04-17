@@ -14,7 +14,7 @@
     position: relative;
 
     height: 48rem;
-    width: 30rem;
+    width: 50rem;
 
     text-align: center;
 
@@ -24,10 +24,12 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
-    padding: 15px;
+    padding: 20px;
+
+    padding-top: 0;
     padding-bottom: 0;
 
 }
@@ -36,20 +38,109 @@
     width: 100%;
     border-bottom: 1px solid #aaa;
     display: flex;
+    flex-direction: row;
     justify-content:space-between;
     align-items: center;
+
+    /* background-color: red; */
 }
 
-.main div {
-    padding: 3px;
-
-    margin: 3px;
-
-    border-radius: 5px;
-    border: 1px solid #9da0a3;
+.main strong{
+    font-size: 1.7rem;
+    font-family: Roboto, sans-serif;
+    color: #74603a;
+}
+.main header button{
+    /* position:absolute;
+    right: 0.5rem;
+    top: 0.5rem; */
+    background: transparent;
+    border: 0;
+    /* font-size: 0; */
     cursor: pointer;
 }
+.main header button:focus{
+    outline: none;
+}
 
-.main div:hover{
-    filter: brightness(20%);
+.bodyDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+
+    width: 100%;
+}
+
+
+
+
+.leftDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* height: 80%; */
+
+
+    padding: 10px;
+
+}
+
+.leftDiv input{
+    width: 100%;
+    height: 1rem;
+
+    border: 1px solid #9da0a3;
+    border-radius: 5px;
+
+    font-size: 1.25rem;
+    padding: 10px;
+
+    margin-bottom: 10px;
+}
+
+.leftDiv label{
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+    padding: 3px;
+}
+
+
+.leftDiv button{
+    width: 100%;
+
+    height: 3.2rem;
+
+    border-radius: 5px;
+    border-color: #7e592a;
+
+    cursor: pointer;
+    color: #fff;
+    background-color: #74603a;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 15px;
+
+    transition: filter 0.3s;
+    outline: none;
+
+}
+
+.leftDiv button:hover{
+    filter: brightness(70%);
+}
+
+.rightDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 10px;
+
+    width: 50%;
 }

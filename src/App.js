@@ -18,6 +18,11 @@ function App() {
     for(let i = 0; i < answer.length; i++){
       console.log(appointmentsData[answer[i]]);
     }
+    setAnswer(weightedIntervalScheduling(appointmentsData));
+    // let path = weightedIntervalScheduling(appointmentsData)
+    // for(let i = 0; i < path.length; i++){
+    //   console.log(appointmentsData[path[i]]);
+    // }
   }
 
   const openAppointmentModal = () => {
@@ -27,10 +32,10 @@ function App() {
   return (
     <div className='Page'>
       <Navbar></Navbar>
-      {answer.length > 0 ? <Table answer={answer} appointmentsData={appointmentsData}></Table>: ''}
       <button onClick={openAppointmentModal}>Realizar Agendamento</button>
       <Table appointmentsData={appointmentsData}></Table>
       <button onClick={handleSearch}>Gerar Melhor Horário</button>
+      {answer.length > 0 && <Table answer={answer} appointmentsData={appointmentsData}></Table>}
       {isModalOpen && <AppointmentModal setIsModalOpen={setIsModalOpen} appointmentsData={appointmentsData}/>}
     </div>
   );

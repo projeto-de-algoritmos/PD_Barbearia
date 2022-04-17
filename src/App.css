@@ -8,9 +8,44 @@ body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page .buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 40%;
+
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.page button{
+  /* width: 100%; */
+
+  height: 3.2rem;
+
+  border-radius: 5px;
+  border-color: #7e592a;
+
+  cursor: pointer;
+  color: #fff;
+  background-color: #74603a;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  /* margin-top: 15px; */
+
+  transition: filter 0.3s;
+  outline: none;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
