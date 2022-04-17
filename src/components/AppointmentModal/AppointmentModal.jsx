@@ -51,19 +51,19 @@ export default (props) => {
                 <input name="appointmentStart" type="input"  onChange={(e) => setAppointmentStart(e.target.value)} />
                 <label htmlFor="appointmentDuration">Duração</label>
                 <input name="appointmentDuration" type="input"  onChange={(e) => setAppointmentDuration(parseFloat(e.target.value))} />
-                {hairData.map(data => 
+                {hairData.map(data =>
                     <div key={data.id} onClick={() => addJob(data.job, data.price)}>
                         {data.job}
                         ...Valor: R$ {data.price}
                     </div>
-                
+
                 )}
                 <button
                     onClick={addAppointment}
                 >
                     Agendar
                 </button>
-            
+
             </div>
         </div>
     )

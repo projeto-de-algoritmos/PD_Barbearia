@@ -10,13 +10,14 @@ const appointmentsData = require("./data/appointments.json");
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  let [answer, setAnswer] = useState([]);
 
 
   const handleSearch = () => {
-    const answer = weightedIntervalScheduling(appointmentsData);
+    setAnswer(weightedIntervalScheduling(appointmentsData));
     for(let i = 0; i < answer.length; i++){
       console.log(appointmentsData[answer[i]]);
-    }    
+    }
   }
 
   const openAppointmentModal = () => {
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className='Page'>
       <Navbar></Navbar>
+      {answer.length > 0 ? <Table answer={answer} appointmentsData={appointmentsData}></Table>: ''}
       <button onClick={openAppointmentModal}>Realizar Agendamento</button>
       <Table appointmentsData={appointmentsData}></Table>
       <button onClick={handleSearch}>Gerar Melhor Horário</button>

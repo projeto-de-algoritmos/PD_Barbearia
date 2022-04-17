@@ -31,7 +31,7 @@ const findSolution = (M, j, tasks, p, solution) => {
     else if (tasks[j].value + M[p[j]] > M[j-1]){
         solution.push(j);
         findSolution(M,p[j], tasks, p, solution);
-    }      
+    }
     else{
         findSolution(M,j-1, tasks, p, solution);
     }
@@ -63,7 +63,7 @@ export const weightedIntervalScheduling = (appointments) => {
     const p = new Array(tasks.length); //Array de compatibilidade
     p[0] = 0;
 
-    
+
     tasks.sort((a,b) => a.finishTime - b.finishTime);
 
     for(let i = 1; i < tasks.length; i++){

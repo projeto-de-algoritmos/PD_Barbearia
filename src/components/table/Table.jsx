@@ -2,16 +2,15 @@ import React from "react";
 import Appointment from "./Appointment";
 
 import './Table.css'
-import * as data from '../../data/appointments.json'
 
 
 
 export default props => {
-    // const appointmentsData = Object.values(JSON.parse(JSON.stringify(data)))
 
     return (
         <table>
             <thead>
+                {props.answer != undefined ? <tr><th colSpan={25} style={{backgroundColor: "rgb(89, 89, 89)"}}>Agenda do dia</th></tr> : ''}
                 <tr className="TableHead">
                     <th className="th">08:00</th>
                     <th className="th">08:30</th>
@@ -41,7 +40,9 @@ export default props => {
                 </tr>
             </thead>
             <tbody>
-                <Appointment appointments={props.appointmentsData}/>
+                {props.answer == undefined ?
+                    <Appointment appointments={props.appointmentsData}/> :
+                    <Appointment answer={props.answer} appointments={props.appointmentsData}></Appointment>}
             </tbody>
         </table>
     )
