@@ -27,7 +27,7 @@ export default (props) => {
         time = time.split(':');
         return parseFloat(time[0]) + parseFloat(time[1])/60
     }
-    
+
 
     const addJob = (job, price) => {
         const jobs = appointmentJobs;
@@ -36,7 +36,7 @@ export default (props) => {
         if (index > -1) {
             jobs.splice(index, 1);
             setAppointmentJobs(jobs);
-            setAppointmentPrice(appointmentPrice - price); 
+            setAppointmentPrice(appointmentPrice - price);
         }else{
             jobs.push(job);
             setAppointmentJobs(jobs);
@@ -59,7 +59,7 @@ export default (props) => {
                 "start": appointmentStart,
                 "duration": appointmentDuration
             })
-    
+
             props.setIsModalOpen(false)
             console.log(props.appointmentsData)
 
@@ -83,13 +83,13 @@ export default (props) => {
                         <label>
                             Horário de Início:
                             <select onChange={(e) => setAppointmentStart(e.target.value)}>
-                                {startTimes.map(time => <option value={time}>{time}</option>)}      
+                                {startTimes.map(time => <option value={time}>{time}</option>)}
                             </select>
                         </label>
                         <label>
                             Duração:
                             <select onChange={(e) => setAppointmentDuration(timeToNumber(e.target.value))}>
-                                {jobDurations.map(duration => <option value={duration}>{duration}</option>)}      
+                                {jobDurations.map(duration => <option value={duration}>{duration}</option>)}
                             </select>
                         </label>
                         {/* <label htmlFor="appointmentStart">Horário de Início</label>

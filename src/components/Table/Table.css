@@ -22,3 +22,13 @@ td, .th{
     margin: 5px;
     padding: 5px;
 }
+
+
+.ValorArrecadado {
+    color: #000000;
+    padding: 0px 10px 0px 10px;
+    width: min-content;
+    overflow: hidden;
+    background-color: rgb(136, 179, 71);
+    border-radius: 20px;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Appointment from "../Appointment/Appointment";
+import { HiCurrencyDollar } from 'react-icons/hi';
 
 import './Table.css'
 
@@ -18,7 +19,11 @@ export default props => {
     return (
         <table>
             <thead>
-                {props.answer != undefined ? <tr><th colSpan={25} style={{backgroundColor: "rgb(89, 89, 89)"}}>Agenda do dia - Valor Arrecadado: R$ {getTotal()}</th></tr> : ''}
+                {props.answer != undefined ?
+                    <tr><th colSpan={25} style={{backgroundColor: "rgb(89, 89, 89)"}}>Agenda do dia
+                    <span className="ValorArrecadado"><HiCurrencyDollar/> {getTotal()}</span></th></tr> :
+                    ''
+                }
                 <tr className="TableHead">
                     <th className="th">08:00</th>
                     <th className="th">08:30</th>

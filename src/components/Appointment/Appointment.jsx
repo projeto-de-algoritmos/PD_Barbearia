@@ -1,4 +1,5 @@
 import React from "react";
+import { HiCurrencyDollar } from 'react-icons/hi';
 
 import './Appointment.css'
 const ROWS = ["08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00",
@@ -35,7 +36,9 @@ export default props => {
                 pos = -1;
                 return (
                     <td key={i} colSpan={columns + 1}>
-                        <div className="AppointmentBlock">{props.appointments[id[temp]].client}</div>
+                        <div className="AppointmentBlock">{props.appointments[id[temp]].client}
+                            <span className="Value"><HiCurrencyDollar/>{props.appointments[id[temp]].price}</span>
+                        </div>
                     </td>
                 );
             }
@@ -51,7 +54,7 @@ export default props => {
         });
     };
 
-    function getLines(job, start, duration, client, index) {
+    function getLines(job, start, duration, client, index, price) {
         let columns = 0;
         return ROWS.map((_, i) => {
             if (start === ROWS[i]) {
@@ -60,11 +63,8 @@ export default props => {
                     <td key={i} colSpan={duration*2}>
                         <div className="AppointmentBlock">
                             {client}
-                            {/* <button onClick={() => removeAppointment(index)}>
-                            <h1>X</h1>
-                        </button>     */}
+                            <span className="Value"><HiCurrencyDollar/>{price}</span>
                         </div>
-                        
                     </td>
                 );
             }
@@ -84,7 +84,7 @@ export default props => {
         return props.appointments.map((element, i) => {
                 return (
                     <tr key={i}>
-                        { getLines(element.job, element.start, element.duration, element.client, i) }
+                        { getLines(element.job, element.start, element.duration, element.client, i, element.price) }
                     </tr>
                 )
         });
