@@ -92,10 +92,6 @@ export default (props) => {
                                 {jobDurations.map(duration => <option value={duration}>{duration}</option>)}
                             </select>
                         </label>
-                        {/* <label htmlFor="appointmentStart">Horário de Início</label>
-                        <input name="appointmentStart" type="input"  onChange={(e) => setAppointmentStart(e.target.value)} />
-                        <label htmlFor="appointmentDuration">Duração</label>
-                        <input name="appointmentDuration" type="input"  onChange={(e) => setAppointmentDuration(parseFloat(e.target.value))} /> */}
                         <button
                             onClick={addAppointment}
                         >

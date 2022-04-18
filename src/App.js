@@ -19,10 +19,6 @@ function App() {
       console.log(appointmentsData[answer[i]]);
     }
     setAnswer(weightedIntervalScheduling(appointmentsData));
-    // let path = weightedIntervalScheduling(appointmentsData)
-    // for(let i = 0; i < path.length; i++){
-    //   console.log(appointmentsData[path[i]]);
-    // }
   }
 
   const openAppointmentModal = () => {

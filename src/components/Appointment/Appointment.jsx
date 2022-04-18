@@ -9,10 +9,6 @@ const ROWS = ["08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00",
 
 export default props => {
 
-    // const removeAppointment = (index) => {
-    //     props.appointments.splice(index, 1)
-    // }
-
     function setSchedule() {
         let times = [];
         let durations = [];
