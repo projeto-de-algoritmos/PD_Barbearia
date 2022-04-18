@@ -21,7 +21,7 @@ export default props => {
             <thead>
                 {props.answer != undefined ?
                     <tr><th colSpan={25} style={{backgroundColor: "rgb(89, 89, 89)"}}>Agenda do dia
-                    <span className="ValorArrecadado"><HiCurrencyDollar/> {getTotal()}</span></th></tr> :
+                    <span className="ValorArrecadado">Arrecadação total: <HiCurrencyDollar/>{getTotal()}</span></th></tr> :
                     ''
                 }
                 <tr className="TableHead">
